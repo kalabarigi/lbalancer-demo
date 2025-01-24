@@ -3,7 +3,7 @@
 variable "gcp_project" {
   description = "Project in which GCP Resources to be created"
   type = string
-  default = "tcs-demo-448312"
+  default = "tcs-llm"
 }
 
 # GCP Region
