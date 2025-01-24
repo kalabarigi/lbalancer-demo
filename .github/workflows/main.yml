@@ -51,19 +51,18 @@ jobs:
     #  working-directory: ./path/to/terraform/files
 
     # Validate the Terraform code
-    #- name: Terraform Validate
-    #  run: terraform validate
+    - name: Terraform Validate
+      run: terraform validate
      # working-directory: ./path/to/terraform/files
 
     # Plan Terraform changes
-    - name: Terraform destroy
-      run: terraform destroy
+    - name: Terraform plan
+      run: terraform plan
     #  working-directory: ./path/to/terraform/files
 
     # Apply Terraform changes (only on push to main)
-    #- name: Terraform Apply
-    #  if: github.ref == 'refs/heads/main'
-     # run: terraform apply -auto-approve
+    - name: Terraform Apply
+      if: github.ref == 'refs/heads/main'
+      run: terraform apply -auto-approve
      # working-directory: ./path/to/terraform/files
-     # env:
-     #   GOOGLE_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
+
