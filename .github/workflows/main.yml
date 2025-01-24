@@ -1,4 +1,4 @@
-name: Terraform CI/CD
+name: Load Balancer Application demo
 
 on:
   push:
