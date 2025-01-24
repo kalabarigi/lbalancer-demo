@@ -1,4 +1,4 @@
-gcp_project     = "tcs-demo-448312"
+gcp_project     = "tcs-llm"
 gcp_region1     = "us-central1"
 machine_type    = "e2-micro"
 environment     = "dev"
